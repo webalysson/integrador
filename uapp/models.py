@@ -45,3 +45,13 @@ class Movimentacao(models.Model):
 
     class Meta:
         verbose_name='Movimentaçõe'
+
+
+class Saida(models.Model):
+    data_saida = models.DateTimeField()
+    data_cadastro = models.DateTimeField(auto_now_add=True)
+    descricao = models.CharField(max_length=100)
+    valor = models.FloatField()
+
+    def __str__(self):
+        return f'{self.descricao}: {self.valor}'
