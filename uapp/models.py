@@ -46,7 +46,7 @@ class Movimentacao(models.Model):
     class Meta:
         verbose_name='Movimentaçõe'
 
-
+# Controle de saídas
 class Saida(models.Model):
     data_saida = models.DateTimeField()
     data_cadastro = models.DateTimeField(auto_now_add=True)
